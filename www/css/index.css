@@ -89,6 +89,7 @@ h1 {
                     0px 7px 0px #333,
                     0px 8px 7px #001135;
     font: 80px 'ChunkFiveRegular';
+	font-weight: bold;
 }
 
 .clock{
