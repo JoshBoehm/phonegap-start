@@ -35,10 +35,15 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
         <script type="text/javascript" src="js/moment.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="views/Viewport.js"></script>
         <script src="http://debug.phonegap.com/target/target-script-min.js#01189998819991197253"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+		<script type="text/javascript">
+			document.addEventListener("deviceready", app.mainLaunch, false);
+		</script>
         <script>
 		document.addEventListener("deviceready", function () {function updateClock() {
             var now = moment().format("h:mm:ss A");
