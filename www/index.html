@@ -53,9 +53,12 @@
 		function updateClock() {
             var now = moment().format("h:mm:ss A");
             $('#time').html(now);
+			if(now%2=0){
+				$('#time').css("color","red");
+			}
+			else { $('#time').css("color","#fff");}
 			//console.log(now);
-            setTimeout(updateClock, 1000);
-            setTimeout(updateClock, 1000);
+             setTimeout(updateClock, 1000);
             }
             updateClock();
         </script>
