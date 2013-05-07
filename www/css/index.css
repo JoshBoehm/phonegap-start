@@ -91,6 +91,11 @@ h1 {
     font: 80px 'ChunkFiveRegular';
 }
 
+.clock{
+    position:relative;
+    margin-top: 25%;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
