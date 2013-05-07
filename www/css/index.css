@@ -72,7 +72,8 @@ body {
 	font-weight: bold;
 	position: relative;
 	margin:0px auto;
-	width: 150px;
+	display:block;
+	width: 250px;
 }
 
 .clock{
