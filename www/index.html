@@ -45,12 +45,13 @@
 			document.addEventListener("deviceready", app.mainLaunch, false);
 		</script>
         <script>
-		document.addEventListener("deviceready", function () {function updateClock() {
+		function updateClock() {
             var now = moment().format("h:mm:ss A");
             $('#time').html(now);
+			console.log(now);
             setTimeout(updateClock, 1000);
             }
-            updateClock();}, false);
+            updateClock();
         </script>
     </body>
 </html>
