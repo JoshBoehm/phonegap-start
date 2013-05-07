@@ -39,7 +39,11 @@
 		<script type="text/javascript" src="app/app.js"></script>
 		<script type="text/javascript" src="views/Viewport.js"></script>
         <script type="text/javascript">
-          //app.initialize();
+		$(document).ready(function() {
+			app.initialize();
+			document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+		}
+          //
         </script>
 		<script type="text/javascript">
 			document.addEventListener("deviceready", app.mainLaunch, false);
