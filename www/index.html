@@ -53,16 +53,16 @@
 		var alarmTriggered = false;
 		function pulseVibrate() {
 		for(var i=0;i<3;i++){
-			setTimeout(navigator.notification.vibrate(500), 1000);
+			setTimeout(navigator.notification.vibrate(500), 1000*i);
 		}	}		
 		function updateClock() {
 			var now = moment();
 			var alarm = moment("2013-05-07 05:14:30 PM", "YYYY-MM-DD HH:mm:ss A");
 			$('#time').html(now.format("h:mm:ss A"));
 			if(alarm.diff(now)<500 && !alarmTriggered){
-				alert("beep beep!");
-				pulseVibrate();
 				alarmTriggered = true;
+				alert("beep beep!");
+				pulseVibrate();				
 			}
 		}
 		setInterval(updateClock, 1000);
