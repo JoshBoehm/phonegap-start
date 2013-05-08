@@ -52,20 +52,15 @@
         <script>
 		var alarmTriggered = false;
 		function updateClock() {
-            var now = moment();
-            var alarm = moment("2013-05-07 05:14:30 PM", "YYYY-MM-DD HH:mm:ss A");
-            $('#time').html(now.format("h:mm:ss A"));
+			var now = moment();
+			var alarm = moment("2013-05-07 05:14:30 PM", "YYYY-MM-DD HH:mm:ss A");
+			$('#time').html(now.format("h:mm:ss A"));
 			if(alarm.diff(now)<500 && !alarmTriggered){
-                alert("beep beep!");
-                alarmTriggered = true;
-				//$('#time').css("font-weight","bold");
+				alert("beep beep!");
+				alarmTriggered = true;
 			}
-			else { $('#time').css("font-weight","normal");
-			}
-			//console.log(now);
-             setTimeout(updateClock, 1000);
-            }
-		updateClock();
+		}
+		setInterval(updateClock, 1000);
         </script>
     </body>
 </html>
